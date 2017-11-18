@@ -111,7 +111,7 @@ $('#kick').on('click', function () {
    // accentDial("#slider-range-max","#amount");
    // accentDial("#slider-range-max-2","#amount-2");
    $("#note").append('<div class="quarter note e4"></div>');
-   playSequence.push( kick);
+   playSequence.push(kick);
   
 })
 
@@ -149,12 +149,12 @@ $('#crash').on('click', function() {
     
 });
 
-$('.note:first-of-type').on('playing', function() {
+$(crash.get(0)).on('playing', function() {
   console.log('playing');
 
 });
 
-$('#note').on(".d6",'click', function() {
+$('#note').on('click', ".d6", function() {
     crash.get(0).play();
     console.log("here");
 
@@ -162,7 +162,6 @@ $('#note').on(".d6",'click', function() {
 
 $('#play').on('click', function() {
    console.log(playSequence);
-
 
    for (i = 0; i < playSequence.length; i++) {
      playSequence[i].get(0).play();
